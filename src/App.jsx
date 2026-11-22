@@ -3,14 +3,28 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Profile from '../pages/profile.jsx'
+import Navbar from './components/navbar.jsx'
+import Hero from './sections/hero.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+
+  const navbarLinks = [
+    {label :"About",href :"#about"},
+    {label :"Projects",href :"#projects"},
+    {label :"Contact",href :"#contact"}
+
+  ]
+  
   return (
     <>
-      <h1>Hi HI HI LOKKA!</h1>
+      
+      <Navbar links={navbarLinks}/>
+      <Hero/>
+     
     </>
+
   )
 }
 
